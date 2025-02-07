@@ -9,8 +9,6 @@ Original file is located at
 **Chat Assistant for SQLite Database**
 """
 
-pip install streamlit
-
 import streamlit as st
 import sqlite3
 import re
