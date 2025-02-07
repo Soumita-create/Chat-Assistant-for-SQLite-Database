@@ -10,6 +10,7 @@ Original file is located at
 """
 
 import streamlit as st
+import streamlit as st
 import sqlite3
 import re
 
@@ -127,6 +128,18 @@ def process_query(user_input):
 user_input = "Show me all employees in the engineering department"
 result = process_query(user_input)
 print(result)
+
+# Streamlit UI
+st.title("Chat Assistant for SQLite Database")
+
+# Ensure database is created
+create_database("your_database_name.db")
+
+user_input = st.text_input("Ask a question about the database:")
+
+if user_input:
+    response = process_query(user_input)
+    st.write("Response:", response)
 
 # Chat function to interact with the user
 
